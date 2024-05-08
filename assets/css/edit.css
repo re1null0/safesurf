@@ -1,0 +1,459 @@
+/*
+QUICK N DIRTY COLOR SCHEME:
+$palette: (
+        bg:                        #D3426E,
+        fg:                        #ffffff,
+        fg-bold:                #ffffff,
+        fg-light:                rgba(255,255,255,0.35),
+        border:                    rgba(255,255,255,0.125),
+        border-bg:                rgba(255,255,255,0.025),
+        border2:                rgba(255,255,255,0.25),
+        border2-bg:                rgba(255,255,255,0.075),
+        accent:                    #E785A2,
+        important:                #42CBD4,
+        fg-alt:                    #000000,
+        border-alt:                rgba(0,0,0,0.125)
+    );
+
+light grey: e0e0e0;
+*/
+
+
+/*--------------------------------------------------------------------------------------------------------------------------- Robert */
+/*------------------------------------------------------------------------------------- General */
+html, body {
+	max-width: 100% !important;
+	overflow-x: hidden !important;
+}
+
+/*-------------------------------------------- Menu*/
+.collapseContent {
+    display: none;
+}
+.collapseContent * {
+    font-size: .9em;
+}
+.collapsibleMenu {
+    width: 100%;
+}
+.collapsibleMenu:focus, .collapsibleMenu:focus{
+    outline: none;
+}
+.highlightedMenuBtn{
+    background-color: #e67798;
+}
+.altCol img {
+    image-rendering: crisp-edges;
+}
+
+/*-------------------------------------------- Top Wrapper*/
+.customInner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 20rem;
+}
+@media screen and (max-width: 980px) { .customInner  { height: 18rem; }}
+.customInner  div:nth-of-type(1) {
+    flex-basis: 35%;
+    padding-right: 10%;
+}
+.customInner  div:nth-of-type(2) {
+    flex-basis: 65%;
+    padding-left: 10%;
+}
+.customInner div img{
+    width: 100%;
+    margin-top: -35%;
+    box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.125);
+}
+@media screen and (max-width: 980px) { .customInner div img  { margin-top: calc(4rem - 50%); }}
+.customInner p {
+    letter-spacing: 0 !important;
+    line-height:150% !important;
+    font-size: 1em !important;
+}
+.imgLandscape {
+    margin-top: 0;
+}
+
+
+
+/*------------------------------------------------------------------------------------- HOME BANNER */
+.titleBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 27rem;
+}
+.titleBox .left{
+    padding-right: 30%;
+}
+.titleBox .left p {
+    letter-spacing: 0 !important;
+    line-height:150% !important;
+    font-size: 1em !important;
+}
+.titleBox .right img {
+    margin-top: -2rem;
+    margin-right: -100%;
+    max-width: 250%;
+    z-index: 250;
+    float: right;
+    overflow-y: visible;
+    position: relative;
+    image-rendering: crisp-edges;
+}
+.myImgConainer {
+	position: relative;
+}
+.titleBox .right img.myOver { 
+	position: relative;
+	z-index: 10;
+}
+.titleBox .right img.myUnder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    display: default;
+}
+
+@media screen and (max-width: 736px) { .titleBox .right img { margin-top: calc(5rem + 2rem - 30%); }}
+@media screen and (max-width: 980px) { .titleBox  { height: 20rem; } .titleBox .right img.myUnder { display: none; }}
+@media screen and (max-width: 1680px) { 
+    .titleBox .right img { max-width: 270%; margin-right: -110%; }
+}
+
+/*------------------------------------------------------------------------------------- HOME Circles */
+
+h1, h2 {
+    letter-spacing: 0;
+}
+
+h1 {
+    font-size: 1.5rem !important;
+    font-weight: 400;
+}
+
+.myBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.myCircle {
+    color:black;
+    height: 16rem;
+    width: 16rem;
+    line-height: 100%;
+
+    display: block;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+.myCircle img {
+    width:100%;
+}
+
+.myCircle span {
+    width: 80%;
+    height: 60%;
+    font-size:1.2em;
+    line-height:120%;
+    color:#383838;
+
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+
+    text-align: center;
+    margin: 0 auto;
+
+    font-weight: 700;
+}
+@media screen and (max-width: 1680px) { .myCircle {height: 12rem; width: 12rem;} }
+@media screen and (max-width: 1280px) { .myCircle {height: 10rem; width: 10rem;} }
+@media screen and (max-width: 980px) { .myCircle {height: 8rem; width: 8rem;} }
+@media screen and (max-width: 736px) { .myCircle {height: 6rem; width: 6rem;} }
+@media screen and (max-width: 480px) { .myCircle {height: 4rem; width: 4rem;} }
+
+.ourOverview {
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+}
+
+/*------------------------------------------------------------------------------------- HOME Spotlight */
+#wrapper.overwrite .spotlight {
+    overflow: visible;
+}
+
+#wrapper.overwrite .spotlight .image {
+    border-radius: 0;
+    height: 10rem;
+
+    overflow: visible;
+    position: relative;
+}
+
+#wrapper.overwrite .spotlight .image img {
+    border-radius: 0;
+
+    overflow: hidden;
+    position: absolute;
+
+    margin-top: -10rem;
+    top: calc(0 + 10rem);
+
+    box-shadow: 0px 0px 3rem rgba(0,0,0,.25);
+
+    border-radius: 15px;
+}
+
+#wrapper.overwrite .spotlight .image img:hover {
+    transform: scale(1.01); 
+}
+
+@media screen and (max-width: 1680px) { #wrapper.overwrite .spotlight .image img {margin-top: -6rem;} }
+@media screen and (max-width: 1280px) { #wrapper.overwrite .spotlight .image img {margin-top: -11rem;} }
+@media screen and (max-width: 736px) { #wrapper.overwrite .spotlight .image img {margin-top: 0rem;} }
+
+#wrapper.overwrite #one { z-index: 10; }
+#wrapper.overwrite #two { z-index: 20; }
+#wrapper.overwrite #three { z-index: 30; }
+#wrapper.overwrite #four { z-index: 40; }
+#wrapper.overwrite #five { z-index: 10000; }
+#wrapper.overwrite #one .image img { z-index: 5; }
+#wrapper.overwrite #two .image img { z-index: 15; }
+#wrapper.overwrite #three .image img { z-index: 25; }
+#wrapper.overwrite #four .image img { z-index: 35; }
+
+.homeMockup img {    transition: transform .5s;}
+.homeMockup img:hover {    transform: scale(1.02); }
+
+/*------------------------------------------------------------------------------------- HOME Process */
+.features article {
+    box-shadow: 0px 0px 3rem rgba(0,0,0,0.25);
+}
+
+/*------------------------------------------------------------------------------------- HOME Animations */
+[aos="fade"] {
+  opacity: 0.5;
+  transition-property: opacity;
+}
+
+[aos="fade"].aos-animate {
+  opacity: 1;
+}
+
+/*------------------------------------------------------------------------------------- Footer */
+#footer .inner ul.contact {
+	width: 100%;
+	margin: 0;
+}
+
+#footer .inner ul.copyright {
+	margin:  2em 0 0 0;
+}
+
+#footer .inner {
+	padding-bottom: 2em;
+}
+
+.contact img {
+	width: 12em;
+}
+
+ul.contact li {
+	margin-top: 1em;
+}
+ul.contact li.fa-phone {
+	margin-top: .8em;
+}
+
+.contact * {
+	font-size: .9em;
+}
+
+.copyright * {
+	font-size: .9em;
+}
+
+.contact .spacer {
+	margin-top: 1em;
+}
+
+.footerBox {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footerBox .left{
+    padding-right: 5%;
+    flex: 1 1 30rem;
+}
+
+.footerBox .right{
+    padding-left: 5%;
+    flex: 1 1 15rem;
+}
+
+.footerBox a.imgLink{
+    border: none;
+}
+
+.reviewBox {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+    margin-left: -1em;
+    margin-right: -1em;
+    max-height: 30rem;
+    overflow-y: scroll;
+    margin: -10px;
+}
+
+.reviewBox::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: rgba(0,0,0,0);
+	border-radius: 10px;
+}
+
+.review {
+	border: 2px solid rgba(255,255,255,.125);
+	border-radius: 20px;
+	padding: 1em;
+	width: calc(50% - 2em);
+	flex: 1 1 15rem;
+	margin: 10px;
+	position: relative;
+	font-size: .9em;
+}
+
+.review p:nth-of-type(1) {
+	margin-bottom: 3em;
+}
+
+.review p:nth-of-type(2) {
+	font-style: italic;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 1em;
+}
+
+/*------------------------------------------------------------------------------------- Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #ddd;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #871C3C; 
+}
+
+/*------------------------------------------------------------------------------------- Last Sec Edits */
+.flex2col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.flex2col * {
+    flex-basis: 50%; 
+    padding-top:50px;
+}
+.flex2col img {
+    width: 50%;
+}
+.features article .image img {
+    border-radius: 18px 18px 0 0 !important;
+}
+.myIcon {
+    width: 1.5em;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: -.2em;
+}
+.myIconMenu {
+    width: 1.5em;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: -.3em;
+}
+@media screen and (max-width: 736px) { .myIconMenu { width: 1.1em; margin-bottom: -.15em;} }
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------- Kaitlyn */
+.blue-bar {
+	border-left:5px solid #42CBD4 !important;
+	padding-left:20px;
+	
+}
+
+.sec_title {
+	color:black;
+	font-size:1.8em;
+	font-weight:bold;
+
+}
+
+.sec_img img{
+	padding-left:50px;
+	width:450px;
+}
+
+.sec_img2 img{
+	padding-right:50px;
+	width:450px;
+}
+
+.bordernone {
+    border:none;
+}
+
+.largerh2 {
+    font-size:1.8em;
+}
+.row {
+	padding-bottom:50px;
+}
+
+.wrapper .blue-bar h2 {
+    border: none;
+    font-size:1.5em;
+    line-height:120%;
+    margin-bottom:10px;
+}
+
